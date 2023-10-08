@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementando o ChartJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div>
+        <canvas  id="myChart"></canvas>
+    </div>
+    
+</body>
+<script >
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho'],
+        datasets: [{
+            
+          label: 'Temperatura média',
+          borderColor: '#ff0000',
+          backgroundColor: "#ff0000",
+          data: [22 , 24, 27, 23, 20, 18],
+          borderWidth: 1
+          
+          
+        },
+        {
+        
+            
+          label: 'Temperatura média',
+          borderColor: '#0000ff',
+          backgroundColor: "#0000ff",
+          data: [90 , 89, 93, 87, 88, 82],
+          borderWidth: 1 
+        }
+    ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+   
+  </script>
+  
+  
+</html>
